@@ -7,7 +7,7 @@ int main() {
     cin >> n;
 
     int num[n] = {};
-    int near = 0;
+    int near;
     int distance = 10;
     int minnum = 200;
 
