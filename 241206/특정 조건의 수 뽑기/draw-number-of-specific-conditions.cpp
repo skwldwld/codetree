@@ -8,7 +8,7 @@ int main() {
 
     int num[n] = {};
     int near;
-    int distance = 10;
+    int distance = 100;
     int minnum = 200;
 
     for(int i = 0; i < n; i++) {
