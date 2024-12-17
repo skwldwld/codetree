@@ -5,13 +5,14 @@ int main() {
     int n;
     cin >> n;
     int count = 0;
+
     if(n % 2 == 0) {
         for(int i = 0; n + 2 * i <= 100; i++) {
             count += n + 2 * i;
         }
     }
     else {
-        for(int i = 1; n + 2 * i  <= 100; i++) {
+        for(int i = 0; n + 2 * i < 100; i++) {
             count += n + 2 * i ;
         }
     }
