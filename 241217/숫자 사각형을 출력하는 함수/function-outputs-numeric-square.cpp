@@ -7,7 +7,7 @@ int main() {
     int num[n][n] = {};
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            num[i][j] = (i + 1) + (4 * j);
+            num[i][j] = (i + 1) + (n * j);
         }
     }
 
