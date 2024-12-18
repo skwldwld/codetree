@@ -2,51 +2,60 @@
 #include <cmath>
 using namespace std;
 
+// 함수 선언
 void mathfunction(float old[3]);
 
 int main() {
-    float old[3] = {};
+    float old[3];
     
+    // 입력 받기
     cin >> old[0] >> old[1] >> old[2];
 
+    // 함수 호출
     mathfunction(old);
 
     return 0;
 }
 
+// 함수 정의
 void mathfunction(float old[3]) {
-    int newnum[3] = {};
-    float max = 1.0; 
-    float min = 1000.0;
-    float mid;
-    int maxidx, minidx, mididx;
+    int result[3];
+    float max = -INFINITY;  
+    float min = INFINITY;   
+    float mid = 0.0;
+    int maxidx = -1, minidx = -1, mididx = -1;
 
-    for (int i = 0; i < 3; i++ ) {
-        if(old[i] > max) {
+    // 최대값 찾기
+    for (int i = 0; i < 3; i++) {
+        if (old[i] > max) {
             max = old[i];
             maxidx = i;
         }
     }
 
-    for(int i = 0; i < 3; i++) {
-        if(old[i] < min) {
+    // 최소값 찾기
+    for (int i = 0; i < 3; i++) {
+        if (old[i] < min) {
             min = old[i];
             minidx = i;
         }
     }
 
-    for(int i = 0; i < 3; i++) {
+    // 중간값 찾기
+    for (int i = 0; i < 3; i++) {
         if (i != maxidx && i != minidx) {
             mid = old[i];
             mididx = i;
         }
     }
 
-    newnum[minidx] = ceil(max);
-    newnum[maxidx] = floor(min);
-    newnum[mididx] = round(mid);
+    // 변환된 값 저장
+    result[maxidx] = ceil(max);   
+    result[minidx] = floor(min);  
+    result[mididx] = round(mid);  
 
-    for(int i = 0; i < 3; i++) {
-        cout << newnum[i] << " ";
+    // 입력 순서대로 출력
+    for (int i = 0; i < 3; i++) {
+        cout << result[i] << " ";
     }
 }
