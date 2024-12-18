@@ -26,11 +26,22 @@ void mathfunction(float old[3]) {
             max = old[i];
             maxidx = i;
         }
-        else if(old[i] < min) {
+        // else 
+        // else {
+        //     mid = old[i];
+        //     mididx = i;
+        // }
+    }
+
+    for(int i = 0; i < 3; i++) {
+        if(old[i] < min) {
             min = old[i];
             minidx = i;
         }
-        else {
+    }
+
+    for(int i = 0; i < 3; i++) {
+        if (i != maxidx && i != minidx) {
             mid = old[i];
             mididx = i;
         }
