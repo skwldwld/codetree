@@ -26,11 +26,6 @@ void mathfunction(float old[3]) {
             max = old[i];
             maxidx = i;
         }
-        // else 
-        // else {
-        //     mid = old[i];
-        //     mididx = i;
-        // }
     }
 
     for(int i = 0; i < 3; i++) {
@@ -47,8 +42,8 @@ void mathfunction(float old[3]) {
         }
     }
 
-    newnum[maxidx] = ceil(max);
-    newnum[minidx] = floor(min);
+    newnum[minidx] = ceil(max);
+    newnum[maxidx] = floor(min);
     newnum[mididx] = round(mid);
 
     for(int i = 0; i < 3; i++) {
