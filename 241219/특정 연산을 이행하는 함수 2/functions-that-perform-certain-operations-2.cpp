@@ -1,6 +1,19 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+
+void mathfunction(float old[3]);
+
+int main() {
+    float old[3] = {};
+    
+    cin >> old[0] >> old[1] >> old[2];
+
+    mathfunction(old);
+
+    return 0;
+}
+
 void mathfunction(float old[3]) {
     int newnum[3] = {};
     float max = 1.0; 
@@ -31,14 +44,3 @@ void mathfunction(float old[3]) {
         cout << newnum[i] << " ";
     }
 }
-
-int main() {
-    float old[3] = {};
-    
-    cin >> old[0] >> old[1] >> old[2];
-
-    mathfunction(old);
-
-    return 0;
-}
-
