@@ -48,5 +48,5 @@ void mathfunction(float old[3]) {
 
     
 
-    cout << newnum[0] << newnum[1] << newnum[2];
+    cout << newnum[0] << " " << newnum[1] << " " << newnum[2];
 }
